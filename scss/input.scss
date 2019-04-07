@@ -21,7 +21,7 @@ select {
 }
 
 textarea {
-  line-height: 1.5;
+  line-height: $lineHeight;
 }
 
 input[type="text"], input[type="password"], input[type="email"],
@@ -36,11 +36,15 @@ input[type="text"], input[type="password"], input[type="email"] {
   width: 100%;
 }
 
+textarea {
+  width: 20rem;
+  vertical-align: top;
+}
+
 input[type="submit"], button {
   padding: $padding/2 $padding;
   background: 0;
   border: $border;
-  font-variant: bold;
   outline: 0;
   cursor: pointer;
 }

@@ -1,13 +1,5 @@
 /* Colours */
 
-$alertColors: (
-  danger: rgb(235, 71, 71),
-  success: rgb(107, 207, 87),
-  warning: rgb(233, 178, 58),
-  info: rgb(68, 138, 243),
-  inverted: #888
-);
-
 @each $name, $color in $alertColors {
   .#{$name} {
     color: white;

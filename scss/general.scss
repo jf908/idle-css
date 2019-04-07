@@ -3,25 +3,34 @@
 // Variables
 
 $darkMode: false !default;
-$googleFont: 'Lato';
+$googleFont: 'Lato' !default;
+$googleImport: true !default;
 $googleUrl: 'https://fonts.googleapis.com/css?family=' + $googleFont + ':400,700';
-$fontFamily: $googleFont, sans-serif;
-$border-radius: 4px;
-$fontSize: 18px;
-$margin: 1.5rem;
-$padding: 16px;
-$navHeight: 80px;
+$fontFamily: $googleFont, sans-serif !default;
+$border-radius: 4px !default;
+$fontSize: 18px !default;
+$margin: 1.5rem !default;
+$padding: 16px !default;
+$navHeight: 80px !default;
+$lineHeight: 1.5;
 
 // Colours
 
-$background: white;
-$color: black;
-$border-color: #ccc;
-$focused-border-color: #888;
-$faded: rgba(0,0,0,.03);
-$link-color: rgb(46, 117, 224);
-$visited-color: rgb(46, 117, 224);
-// $visited-color: rgb(116, 52, 201);
+$background: white !default;
+$color: black !default;
+$border-color: #ccc !default;
+$focused-border-color: #888 !default;
+$faded: rgba(0,0,0,.03) !default;
+$link-color: rgb(46, 117, 224) !default;
+$visited-color: rgb(46, 117, 224) !default;
+
+$alertColors: (
+  danger: rgb(235, 71, 71),
+  success: rgb(107, 207, 87),
+  warning: rgb(233, 178, 58),
+  info: rgb(68, 138, 243),
+  inverted: #888
+) !default;
 
 // Dark Mode
 @if $darkMode {
@@ -35,19 +44,22 @@ $visited-color: rgb(46, 117, 224);
 $border: 1px solid $border-color;
 
 @mixin marbot {
-  margin-bottom: 1.5rem;
+  margin-bottom: $margin;
 }
 
-@import url($googleUrl);
+@if $googleImport {
+  @import url($googleUrl);
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 html {
   font-size: $fontSize;
-  line-height: 1.5;
+  line-height: $lineHeight;
 }
 
 body {

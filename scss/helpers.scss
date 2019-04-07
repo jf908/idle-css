@@ -1,5 +1,7 @@
 /* Helpers */
 
+// Display
+
 .display-flex {
   display: flex;
 }
@@ -12,16 +14,21 @@
 .display-none {
   display: none;
 }
-
 .display-flex.gap {
-  margin: -$padding;
+  margin: -$padding/2;
 }
+
+// Flex
+
 .flex-1 {
   flex: 1;
+  min-width: 0;
 }
 .flex-1.gap {
-  margin: $padding;
+  margin: $padding/2;
 }
+
+// Aligning
 
 .align-center {
   text-align: center;
@@ -33,9 +40,13 @@
   text-align: right;
 }
 
+// Width
+
 .full-width {
   width: 100%;
 }
+
+// Margin
 
 .margin-big {
   margin-bottom: $margin * 2;
@@ -44,7 +55,19 @@
   margin-bottom: $margin * 4;
 }
 
+// Anchor
+
 .anchor {
   position: relative;
   top: -$navHeight;
+}
+
+// Shadow
+
+.shadow {
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.shadow-inset {
+  box-shadow: 0 2px 4px rgba(0,0,0,.1) inset;
 }

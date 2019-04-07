@@ -78,6 +78,12 @@ nav.fixed+* {
   margin: auto;
 }
 
+// Section
+
+section {
+  @include marbot;
+}
+
 // Alert
 
 .alert {

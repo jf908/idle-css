@@ -12,7 +12,7 @@ h6 { font-size: .8rem; }
 @for $index from 1 through 6 {
   h#{$index} {
     @include marbot;
-    line-height: 1.5rem;
+    line-height: $lineHeight;
   }
 
   h#{$index}.underlined {
@@ -85,6 +85,7 @@ blockquote {
 
 pre {
   @include marbot;
+  overflow-x: auto;
   font-size: .7777778rem;
   background: $faded;
   border: $border;
