@@ -1,0 +1,59 @@
+/* Input */
+
+input, select, textarea, button {
+  @include marbot;
+  background: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border-radius: $border-radius;
+}
+
+input:disabled, select:disabled, textarea:disabled, button:disabled {
+  opacity: 0.5;
+}
+
+select {
+  padding: $padding/2 $padding;
+  background: $background;
+  border: $border;
+  outline: 0;
+}
+
+textarea {
+  line-height: 1.5;
+}
+
+input[type="text"], input[type="password"], input[type="email"],
+input[type="number"], textarea {
+  padding: $padding/2 $padding;
+  border: $border;
+  outline: 0;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  max-width: 20rem;
+  width: 100%;
+}
+
+input[type="submit"], button {
+  padding: $padding/2 $padding;
+  background: 0;
+  border: $border;
+  font-variant: bold;
+  outline: 0;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover:disabled, button:hover:disabled {
+  border: $border;
+  cursor: default;
+}
+
+input:focus, button:hover, select:focus, textarea:focus {
+  border-color: #888;
+}
+
+input[type="submit"]:active, button:active {
+  background: $border-color;
+}

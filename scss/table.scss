@@ -1,0 +1,24 @@
+/* Table */
+
+table {
+  @include marbot;
+  border-collapse: collapse;
+}
+
+table.striped tr:nth-child(even) td {
+  background: $faded;
+}
+
+th, td {
+  border-bottom: $border;
+  padding: $padding/2;
+}
+
+th {
+  border-bottom: 2px solid $border-color;
+  text-align: left;
+}
+
+table.bordered th, table.bordered td {
+  border: $border;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "idle-css",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jf908/idle-css",
+  "author": {
+    "name": "jf908"
+  },
+  "description": "A super simple CSS library",
+  "main": "idle.sass",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jf908/idle-css.git"
+  },
+  "keywords": [
+    "css",
+    "scss"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.11.0"
+  },
+  "scripts": {
+    "build": "npm run build-scss && npm run build-clean",
+    "build-clean": "cleancss -o css/idle.min.css css/idle.css",
+    "build-scss": "node-sass idle.scss css/idle.css",
+    "watch": "npm run build-scss -- --watch --usePolling --polling-interval 500"
+  },
+  "files": [
+    "css",
+    "scss",
+    "idle.scss",
+    "LICENSE",
+    "README.md"
+  ]
+}

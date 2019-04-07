@@ -1,0 +1,25 @@
+/* Colours */
+
+$alertColors: (
+  danger: rgb(235, 71, 71),
+  success: rgb(107, 207, 87),
+  warning: rgb(233, 178, 58),
+  info: rgb(68, 138, 243),
+  inverted: #888
+);
+
+@each $name, $color in $alertColors {
+  .#{$name} {
+    color: white;
+    background: $color;
+    border: 1px solid rgba(0,0,0,.3);
+  }
+
+  button.#{$name}:hover {
+    border: 1px solid rgba(0,0,0,.6);
+  }
+
+  button.#{$name}:active {
+    background: darken(desaturate($color, 15%), 15%);
+  }
+}

@@ -1,0 +1,128 @@
+/* Components */
+
+// Navbar
+
+nav {
+  @include marbot;
+  display: flex;
+  flex-wrap: wrap;
+  background: $background;
+  border-bottom: $border;
+  width: 100%;
+  padding: 0 $padding;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    height: $navHeight;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: $navHeight;
+    vertical-align: middle;
+    margin-right: .2em;
+  }
+
+  a .brand {
+    margin-right: 0;
+  }
+
+  a {
+    height: $navHeight;
+    color: $color;
+    line-height: $navHeight - 1px;
+    text-decoration: none;
+    padding: 0 1rem;
+  }
+
+  a:visited, a:link {
+    color: $color;
+  }
+  
+  a:hover {
+    background: $faded;
+    text-decoration: none;
+  }
+
+  button {
+    margin: auto .2em;
+  }
+
+  .nav-right {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+nav.fixed {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+}
+
+nav.fixed+* {
+  margin-top: $navHeight;
+  padding-top: $margin;
+}
+
+// Container
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 $padding;
+  margin: auto;
+}
+
+// Alert
+
+.alert {
+  @include marbot;
+  background: $faded;
+  border: $border;
+  padding: $padding;
+  border-radius: $border-radius;
+}
+
+// Card
+
+.card {
+  @include marbot;
+  background: $background;
+  border: $border;
+  border-radius: $border-radius;
+  padding: $padding;
+}
+
+.card>button, .card-body>button {
+  margin-bottom: 0;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card.titled {
+  padding: 0;
+  border: 0;
+}
+
+.card-title {
+  background: $faded;
+  padding: $padding;
+  border: $border;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+.card-body {
+  padding: $padding;
+  border: $border;
+  border-top: 0;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}

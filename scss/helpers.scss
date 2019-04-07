@@ -1,0 +1,50 @@
+/* Helpers */
+
+.display-flex {
+  display: flex;
+}
+.display-block {
+  display: block;
+}
+.display-inline {
+  display: inline;
+}
+.display-none {
+  display: none;
+}
+
+.display-flex.gap {
+  margin: -$padding;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-1.gap {
+  margin: $padding;
+}
+
+.align-center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.margin-big {
+  margin-bottom: $margin * 2;
+}
+.margin-huge {
+  margin-bottom: $margin * 4;
+}
+
+.anchor {
+  position: relative;
+  top: -$navHeight;
+}

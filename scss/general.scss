@@ -1,0 +1,58 @@
+/* General */
+
+// Variables
+
+$darkMode: false !default;
+$googleFont: 'Lato';
+$googleUrl: 'https://fonts.googleapis.com/css?family=' + $googleFont + ':400,700';
+$fontFamily: $googleFont, sans-serif;
+$border-radius: 4px;
+$fontSize: 18px;
+$margin: 1.5rem;
+$padding: 16px;
+$navHeight: 80px;
+
+// Colours
+
+$background: white;
+$color: black;
+$border-color: #ccc;
+$focused-border-color: #888;
+$faded: rgba(0,0,0,.03);
+$link-color: rgb(46, 117, 224);
+$visited-color: rgb(46, 117, 224);
+// $visited-color: rgb(116, 52, 201);
+
+// Dark Mode
+@if $darkMode {
+  $background: #222;
+  $color: white;
+  $border-color: #444;
+  $focused-border-color: #aaa;
+  $faded: rgba(255,255,255,.03);
+}
+
+$border: 1px solid $border-color;
+
+@mixin marbot {
+  margin-bottom: 1.5rem;
+}
+
+@import url($googleUrl);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: $fontSize;
+  line-height: 1.5;
+}
+
+body {
+  padding-bottom: 100px;
+  font-family: $fontFamily;
+  background: $background;
+  color: $color;
+}
