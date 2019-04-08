@@ -61,3 +61,14 @@ input:focus, button:hover, select:focus, textarea:focus {
 input[type="submit"]:active, button:active {
   background: $border-color;
 }
+
+// Field set and legend
+
+fieldset {
+  border: 0;
+}
+
+legend {
+  margin: 0;
+  @include marbot;
+}
