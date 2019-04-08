@@ -121,6 +121,22 @@ section {
   background: $faded;
   padding: $padding;
   border: $border;
+}
+
+.card-title:first-child {
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+.card-image {
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card-image:first-child {
+  overflow: hidden;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
 }
