@@ -2,7 +2,9 @@ class Customizer {
   constructor() {
     this.sass = new Sass();
     this.options = {
-      darkMode: false
+      darkMode: false,
+      googleFont: 'Lato',
+      'border-radius': 4
     };
     this.idleScss = '';
     this.compiled = '';
@@ -51,8 +53,10 @@ class Customizer {
   updateScss() {
     this.idleScss = '';
     Object.keys(this.options).forEach(option => {
-      if(typeof option === 'string') {
+      if(typeof this.options[option] === 'string') {
         this.idleScss += `$${option}: "${this.options[option]}";`;
+      } else if(typeof this.options[option] === 'number') {
+        this.idleScss += `$${option}: ${this.options[option]}px;`;
       } else {
         this.idleScss += `$${option}: ${this.options[option]};`;
       }

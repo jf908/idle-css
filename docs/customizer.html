@@ -22,9 +22,77 @@
   </nav>
   <div class="container">
     <h2 class="underlined">Customizer</h2>
+    <h3>Demo</h3>
+    <div class="card">
+      <div class="display-flex gap">
+        <div class="flex-1 gap">
+          <h3 class="underlined">Hi there</h3>
+          <p>Hi there again</p>
+          <blockquote>A quote by someone</blockquote>
+          <table class="full-width">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Object</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Jam</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Peanuts</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Jelly</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="flex-1 gap">
+          <form>
+            <input type="text" placeholder="Text"><br>
+            <textarea rows="3">Testing Area</textarea><br>
+            <input type="radio"> Radio<br>
+            <input type="checkbox"> Checkbox<br>
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select><br>
+            <button>Button</button>
+          </form>
+        </div>
+        <div class="flex-1 gap">
+          <div class="alert">
+              1
+          </div>
+          <div class="alert inverted">
+            2
+          </div>
+          <div class="alert danger">
+            3
+          </div>
+          <div class="alert success">
+            4
+          </div>
+          <div class="alert warning">
+            5
+          </div>
+          <div class="alert info">
+            6
+          </div>
+        </div>
+      </div>
+    </div>
     <h3>Options</h3>
     <form>
-      <label><input type="checkbox" onchange="setScss('darkMode', this.checked)"> Dark Mode</label>
+      <label><input type="checkbox" onchange="setScss('darkMode', this.checked)"> Dark Mode</label><br>
+      <label>Google Font <input type="text" onchange="setScss('googleFont', this.value)" value="Lato"></label><br>
+      <label>Border Radius <input type="number" onchange="setScss('border-radius', parseInt(this.value))" value="4"> px</label>
     </form>
     <button id="download" class="success">Download Customized</button>
   </div>
